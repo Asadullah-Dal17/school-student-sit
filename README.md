@@ -1,4 +1,4 @@
-# school-student-sit
+# Class Stats Site(Webapp)
 This is website where, All students results will be automatically update, with inclusion of marks on datasheets.
 
 ## Connection Docs and Modules link
