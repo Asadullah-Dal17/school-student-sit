@@ -20,8 +20,13 @@ class Student:
         # print(type(self.data))
         return self.data
 
+    # def get_all_student_data(self):
+    #     for i in range(len(self.data)):
+    #         st.write(self.data[i])
+
     def get_groups(self):
-        if self.data:
+        if self.data.empty is False:
+            # print("data found")
             # dividing pandas dataframe into groups using group names in the column names group
             grouped_df = self.data.groupby("Group")
             self.green_group = grouped_df.get_group("Green")
@@ -31,6 +36,8 @@ class Student:
             self.brown_group = grouped_df.get_group("Brown")
             self.white_group = grouped_df.get_group("White")
         else:
+            # st.write("Data not found")
+            # print("Data not found")
             st.error("Data not found")
 
 
